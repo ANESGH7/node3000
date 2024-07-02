@@ -4,11 +4,7 @@ var WebSocketServer = require('ws').Server,
 wss.on('connection', function (ws) {
   ws.on('message', function (message) {
     console.log('received: %s', message);
-    // Echo the received message back to the client
-    ws.send(message);
+    // Send a specific message back to the client
+    ws.send('Received your message: ' + message);
   });
-
-  setInterval(function () {
-    ws.send('hi from node3000 server');
-  }, 1000);
 });
