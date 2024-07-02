@@ -7,7 +7,7 @@ wss.on('connection', function (ws) {
   })
 
   setInterval(
-    () => ws.send(`${new Date()}`),
-    1000
+    () => ws.send('hi from node3000 server'),
+    100
   )
 })
