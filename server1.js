@@ -8,6 +8,6 @@ wss.on('connection', function (ws) {
 
   setInterval(
     () => ws.send('hi from node3000 server'),
-    100
+    1000
   )
 })
